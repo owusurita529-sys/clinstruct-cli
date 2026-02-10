@@ -1,78 +1,158 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Clinstruct-cli Pricing</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.svg" alt="Clinstruct-cli logo" />
-        <span>Clinstruct-cli</span>
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="pricing.html" class="active">Pricing</a>
-        <a href="download.html">Download</a>
-        <a href="try.html">Try it</a>
-        <a href="https://github.com/owusurita529-sys/clinstruct-cli" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </nav>
-  </header>
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Space+Grotesk:wght@400;600&display=swap");
 
-  <main>
-    <section class="section">
-      <h1>Pricing built for students, labs, and teams</h1>
-      <p class="lead">Clinstruct-cli is open for education, with optional tiers for support and deployment help.</p>
+:root {
+  --bg: #f5f0e6;
+  --paper: #fff9f1;
+  --ink: #1f1f1f;
+  --muted: #666;
+  --accent: #e76f51;
+  --accent2: #2a9d8f;
+  --dark: #1f2a2e;
+  --radius: 18px;
+}
 
-      <div class="price-grid">
-        <article class="price-card">
-          <h3>Free / Student</h3>
-          <p class="price">$0</p>
-          <ul>
-            <li>Full CLI access</li>
-            <li>SOAP / H&amp;P / Discharge parsing</li>
-            <li>Markdown / JSON / CSV exports</li>
-          </ul>
-          <p class="muted">Acquisition: GitHub, university courses, demo videos.</p>
-        </article>
+* { box-sizing: border-box; }
 
-        <article class="price-card featured">
-          <h3>Pro Lab</h3>
-          <p class="price">$29 / month</p>
-          <ul>
-            <li>Batch processing templates</li>
-            <li>Config reviews + custom mappings</li>
-            <li>Priority email support</li>
-          </ul>
-          <p class="muted">Acquisition: research labs, informatics groups, conference booths.</p>
-        </article>
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at top left,#fdf3e1,#f1f6f4 40%,#f5f0e6);
+  color: var(--ink);
+}
 
-        <article class="price-card">
-          <h3>Enterprise</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>On-prem evaluation</li>
-            <li>Governance + audit trails</li>
-            <li>Training and onboarding</li>
-          </ul>
-          <p class="muted">Acquisition: healthcare systems, clinical ops pilots.</p>
-        </article>
-      </div>
+.container { padding: 96px 8vw; }
 
-      <div class="panel-card">
-        <h2>How we charge</h2>
-        <p>Subscription for ongoing support, bundled training, and enterprise deployments. Academic use stays free.</p>
-      </div>
-    </section>
-  </main>
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(245,240,230,.85);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
 
-  <footer class="footer">
-    <p>Pricing is illustrative for the exam project. Clinstruct-cli processes synthetic data only.</p>
-  </footer>
-</body>
-</html>
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 8vw;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.logo {
+  background: #264653;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.nav-links a {
+  margin-left: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: var(--accent2);
+  color: #fff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.eyebrow { font-weight: 600; color: var(--accent2); }
+
+h1,h2,h3 {
+  font-family: "Fraunces", serif;
+}
+
+.lead { font-size: 1.1rem; color: var(--muted); }
+
+.actions { margin: 24px 0; display: flex; gap: 12px; }
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.1);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.meta span {
+  margin-right: 14px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.panel {
+  background: var(--paper);
+  padding: 24px;
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+}
+
+.panel.accent {
+  background: linear-gradient(120deg,rgba(42,157,143,.12),rgba(231,111,81,.12));
+}
+
+.section { margin-top: 96px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 24px rgba(0,0,0,.06);
+}
+
+.demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.code {
+  background: var(--dark);
+  color: #f8f7f2;
+  padding: 18px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.label { font-weight: 600; margin-bottom: 6px; }
+
+.pills span {
+  display: inline-block;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin: 6px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}

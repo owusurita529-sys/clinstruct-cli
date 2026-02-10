@@ -4,139 +4,133 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clinstruct-cli</title>
+  <meta name="description" content="Clinstruct-cli is a deterministic CLI for structuring clinical notes into SOAP, H&P, and Discharge formats." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.svg" alt="Clinstruct-cli logo" />
-        <span>Clinstruct-cli</span>
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="download.html">Download</a>
-        <a href="try.html">Try it</a>
-        <a href="https://github.com/owusurita529-sys/clinstruct-cli" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Deterministic clinical documentation</p>
-        <h1>Turn messy notes into structured SOAP, H&amp;P, and Discharge formats.</h1>
-        <p class="lead">
-          Clinstruct-cli standardizes clinical notes with transparent rules and configurable mappings.
-          No ML summarization, just consistent outputs that support quality and interoperability.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="download.html">Download CLI</a>
-          <a class="btn ghost" href="try.html">Try it</a>
-          <a class="btn ghost" href="docs.html">View Docs</a>
-        </div>
-        <div class="hero-meta">
-          <span>Outputs: Markdown, JSON, CSV</span>
-          <span>Bundle-aware parsing</span>
-          <span>Interactive review mode</span>
-        </div>
+<header class="site-header">
+  <nav class="nav">
+    <div class="brand">
+      <span class="logo">☰</span>
+      <span>Clinstruct-cli</span>
+    </div>
+    <div class="nav-links">
+      <a class="active" href="#">Home</a>
+      <a href="#docs">Docs</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+      <a href="#try">Try it</a>
+      <a href="https://github.com/owusurita529-sys/clinstruct-cli" target="_blank">GitHub</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">Deterministic clinical documentation</p>
+      <h1>Turn messy notes into structured SOAP, H&amp;P, and Discharge formats.</h1>
+      <p class="lead">
+        Clinstruct-cli standardizes clinical notes using transparent rules.
+        No ML summaries — just consistent, inspectable outputs.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#download">Download CLI</a>
+        <a class="btn" href="#try">Try it</a>
+        <a class="btn" href="#docs">View Docs</a>
       </div>
 
-      <div class="hero-panel">
-        <div class="panel-card">
-          <p class="panel-title">Deterministic pipeline</p>
-          <ul>
-            <li>Normalize and clean lines</li>
-            <li>Detect headings and aliases</li>
-            <li>Apply fallback heuristics</li>
-            <li>Render standardized output</li>
-          </ul>
-        </div>
-        <div class="panel-card accent">
-          <p class="panel-title">Health informatics focus</p>
-          <p>Documentation quality, data consistency, and interoperable exports built in.</p>
-        </div>
+      <div class="meta">
+        <span>Markdown, JSON, CSV</span>
+        <span>Bundle-aware parsing</span>
+        <span>Interactive review</span>
       </div>
-    </section>
+    </div>
 
-    <section class="section reveal">
-      <h2>What makes Clinstruct-cli different</h2>
-      <div class="card-grid">
-        <article class="card" style="--delay: 0ms">
-          <h3>Structured formats</h3>
-          <p>Maps narrative text into SOAP, H&amp;P, and Discharge Summary sections.</p>
-        </article>
-        <article class="card" style="--delay: 80ms">
-          <h3>Deterministic rules</h3>
-          <p>Transparent parsing rules and alias mapping you can inspect and configure.</p>
-        </article>
-        <article class="card" style="--delay: 160ms">
-          <h3>Batch processing</h3>
-          <p>Process directories of notes while capturing per-file failures and warnings.</p>
-        </article>
-        <article class="card" style="--delay: 240ms">
-          <h3>Flexible exports</h3>
-          <p>Export to Markdown for humans, JSON for systems, CSV for analytics.</p>
-        </article>
-        <article class="card" style="--delay: 320ms">
-          <h3>Bundle handling</h3>
-          <p>Split multi-note files using delimiters or timestamps with warnings.</p>
-        </article>
-        <article class="card" style="--delay: 400ms">
-          <h3>Interactive review</h3>
-          <p>Confirm sections, rename headings, and control heuristics at the terminal.</p>
-        </article>
+    <div class="hero-right">
+      <div class="panel">
+        <h3>Deterministic pipeline</h3>
+        <ul>
+          <li>Normalize and clean lines</li>
+          <li>Detect headings and aliases</li>
+          <li>Apply fallback heuristics</li>
+          <li>Render standardized output</li>
+        </ul>
       </div>
-    </section>
 
-    <section class="section demo reveal">
+      <div class="panel accent">
+        <h3>Health informatics focus</h3>
+        <p>Documentation quality, data consistency, and interoperable exports built in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2>What makes Clinstruct-cli different</h2>
+    <div class="cards">
+      <div class="card"><h3>Structured formats</h3><p>SOAP, H&amp;P, Discharge summaries.</p></div>
+      <div class="card"><h3>Deterministic rules</h3><p>Transparent, configurable parsing logic.</p></div>
+      <div class="card"><h3>Batch processing</h3><p>Process directories with warnings.</p></div>
+      <div class="card"><h3>Flexible exports</h3><p>Markdown, JSON, CSV outputs.</p></div>
+      <div class="card"><h3>Bundle handling</h3><p>Split multi-note files safely.</p></div>
+      <div class="card"><h3>Interactive review</h3><p>Confirm sections in terminal.</p></div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="section">
+    <h2>Demo</h2>
+    <p class="muted">Messy note in, structured output out.</p>
+
+    <div class="demo">
       <div>
-        <h2>Demo</h2>
-        <p>Messy note in, structured output out. No ML summaries, just deterministic rules.</p>
-      </div>
-      <div class="demo-grid">
-        <div>
-          <p class="code-label">Input</p>
-          <pre class="code-block"><code>CC - chest pain
+        <p class="label">Input</p>
+        <pre class="code"><code>CC - chest pain
 HPI: started after exercise
 PMH: HTN, asthma
 Assessment: likely MSK strain
 Plan: NSAIDs, follow-up</code></pre>
-        </div>
-        <div>
-          <p class="code-label">Output (JSON)</p>
-          <pre class="code-block"><code>{
+      </div>
+
+      <div>
+        <p class="label">Output (JSON)</p>
+        <pre class="code"><code>{
   "format": "hp",
   "sections": [
-    {"name": "Chief Complaint", "content": "chest pain"},
-    {"name": "HPI", "content": "started after exercise"},
-    {"name": "PMH", "content": "HTN, asthma"},
-    {"name": "Assessment", "content": "likely MSK strain"},
-    {"name": "Plan", "content": "NSAIDs, follow-up"}
+    {"name":"Chief Complaint","content":"chest pain"},
+    {"name":"HPI","content":"started after exercise"},
+    {"name":"PMH","content":"HTN, asthma"},
+    {"name":"Assessment","content":"likely MSK strain"},
+    {"name":"Plan","content":"NSAIDs, follow-up"}
   ]
 }</code></pre>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section reveal">
-      <h2>Who it is for</h2>
-      <div class="pill-grid">
-        <span>Clinical informatics students</span>
-        <span>Documentation QA teams</span>
-        <span>Research labs</span>
-        <span>Health data engineers</span>
-        <span>Educators</span>
-        <span>Clinical ops prototypes</span>
-      </div>
-    </section>
-  </main>
+  <!-- WHO -->
+  <section class="section">
+    <h2>Who it is for</h2>
+    <div class="pills">
+      <span>Clinical informatics students</span>
+      <span>Documentation QA teams</span>
+      <span>Research labs</span>
+      <span>Health data engineers</span>
+      <span>Educators</span>
+      <span>Clinical ops prototypes</span>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p>Clinstruct-cli is an educational tool using synthetic demo data only. It is not a medical or legal compliance product.</p>
-  </footer>
+</main>
+
+<footer class="footer">
+  <p>Clinstruct-cli is an educational tool using synthetic data only.</p>
+</footer>
+
 </body>
 </html>
