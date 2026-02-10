@@ -146,5 +146,30 @@ Optional:
 ## Disclaimer
 StructaMed CLI is an educational tool using synthetic data only. It is not a medical device and does not guarantee legal or regulatory compliance.
 
+## proof/QA
+Reproduce the working CLI in any environment:
+
+Preview the website locally:
+
+python3 -m http.server --directory docs 8000
+# open http://localhost:8000
+Note: demo_outputs/ is generated locally by demo and is intentionally ignored by git.
+
+cargo test --all
+cargo run -- --help
+cargo run -- demo
+
+# strict fixtures must be clean (exit 0)
+cargo run -- selftest --fixtures tests/fixtures/clean/soap --template soap --strict
+cargo run -- selftest --fixtures tests/fixtures/clean/hp --template hp --strict
+cargo run -- selftest --fixtures tests/fixtures/clean/discharge --template discharge --strict
+Terminal gotcha (heredocs)
+If you see bash: EOF: command not found, your heredoc was not closed.
+
+Correct pattern:
+
+cat > file.txt <<'EOF'
+hello
+EOF
 ## License
 MIT
