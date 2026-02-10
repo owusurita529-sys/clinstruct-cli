@@ -1,4 +1,4 @@
-# StructaMed CLI
+# Clinstruct-cli
 
 StructaMed CLI converts unstructured clinical notes into deterministic, standardized formats (SOAP, H&P, Discharge Summary) for documentation quality, interoperability, and data consistency. It uses rules and configuration only (no ML summarization) and ships with synthetic demo data for exams and coursework.
 
