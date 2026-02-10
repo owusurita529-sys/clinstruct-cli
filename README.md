@@ -1,6 +1,6 @@
 # Clinstruct-cli
 
-StructaMed CLI converts unstructured clinical notes into deterministic, standardized formats (SOAP, H&P, Discharge Summary) for documentation quality, interoperability, and data consistency. It uses rules and configuration only (no ML summarization) and ships with synthetic demo data for exams and coursework.
+Clinstruct-cli converts unstructured clinical notes into deterministic, standardized formats (SOAP, H&P, Discharge Summary) for documentation quality, interoperability, and data consistency. It uses rules and configuration only (no ML summarization) and ships with synthetic demo data for exams and coursework.
 
 ## Problem statement
 Clinical notes arrive in wildly inconsistent shapes. As a student working with synthetic notes, I kept reformatting the same data to evaluate documentation quality and export to JSON/CSV. The manual cleanup was slow and error-prone, so I built a deterministic CLI that standardizes text with transparent rules and configurable mappings.
